@@ -1,4 +1,6 @@
-import { Home, Profile, SignIn, SignUp } from "@/pages";
+// routes.jsx
+
+import { Home, Profile, SignIn, SignUp, AboutUs } from "@/pages";
 
 export const routes = [
   {
@@ -26,6 +28,11 @@ export const routes = [
     href: "https://www.material-tailwind.com/docs/react/installation",
     target: "_blank",
     element: "",
+  },
+  {
+    name: "About Us",
+    path: "/aboutus",
+    element: <AboutUs />, // Use AboutUs component
   },
 ];
 
