@@ -1,3 +1,5 @@
+// Al-Asr/src/pages/home.jsx
+
 import React from "react";
 import {
   Card,
@@ -19,46 +21,98 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('/img/background-4.jpg')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-radial from-transparent to-black opacity-90" />
+        </div>
+        <div className="absolute top-0 h-full w-full bg-blue/60 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <Typography
                 variant="h1"
                 color="white"
-                className="mb-6 font-black"
+                className="mb-4 font-black"
               >
-                Your story starts with us.
+                WATCH OUT!<p>AL-ASR.</p>
               </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
-                This is a simple example of a Landing Page you can build using
-                Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
+              <Typography variant="lead" color="white" className="opacity-90 text-lg">
+                {/* Arabic text box */}
+                <div className="border border-gray-300 p-4 rounded-lg mb-6 bg-opacity-10 bg-white">
+                  <span className="block text-xl text-center font-bold">
+                    (١) وَالْعَصْرِ <br />
+                    (٢) إِنَّ الْإِنسَانَ لَفِي خُسْرٍ <br />
+                    (٣) إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ
+                  </span>
+                </div>
+                {/* English text box */}
+                <div className="border border-gray-300 p-4 rounded-lg bg-opacity-10 bg-white">
+                  <p className="text-lg">
+                    (1) By the (passage of) time! <br />
+                    (2) Surely humanity is in (grave) loss, <br />
+                    (3) except those who have faith, do good, and urge each other to the truth, and urge each other to perseverance.
+                  </p>
+                </div>
               </Typography>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Sheikh Karim - Al Asr explanation video section */}
+      <section className="px-4 py-10 bg-white">
+        <div className="container mx-auto flex justify-center space-x-8">
+          {/* First Video Card */}
+          <div className="text-center">
+            <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
+              Sheikh Karim
+            </Typography>
+            <Typography variant="h6" color="blue-gray" className="mb-4">
+              Al Asr explanation
+            </Typography>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/aF-gi9kX5FQ?si=dz-4hiaglF_xcb3q"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          {/* Replica Video Card */}
+          <div className="text-center">
+            <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
+              Abu Masood
+            </Typography>
+            <Typography variant="h6" color="blue-gray" className="mb-4">
+              Interview regarding the subject
+            </Typography>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/aF-gi9kX5FQ?si=dz-4hiaglF_xcb3q"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+
       <section className="-mt-32 bg-white px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featuresData.map(({ color, title, icon, description }) => (
-              <FeatureCard
-                key={title}
-                color={color}
-                title={title}
-                icon={React.createElement(icon, {
-                  className: "w-5 h-5 text-white",
-                })}
-                description={description}
-              />
-            ))}
+            {/* Features section removed and replaced with YouTube video */}
           </div>
           <div className="mt-32 flex flex-wrap items-center">
             <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
-                <FingerPrintIcon className="h-8 w-8 text-white " />
+                <FingerPrintIcon className="h-8 w-8 text-white" />
               </div>
               <Typography
                 variant="h3"
@@ -108,6 +162,7 @@ export function Home() {
           </div>
         </div>
       </section>
+
       <section className="px-4 pt-20 pb-48">
         <div className="container mx-auto">
           <PageTitle section="Our Team" heading="Here are our heroes">
@@ -136,6 +191,7 @@ export function Home() {
           </div>
         </div>
       </section>
+
       <section className="relative bg-white py-24 px-4">
         <div className="container mx-auto">
           <PageTitle section="Co-Working" heading="Build something">
