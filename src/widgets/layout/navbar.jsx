@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
   Navbar as MTNavbar,
   MobileNav,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     window.addEventListener(
@@ -28,33 +28,18 @@ export function Navbar({ brandName, routes, action }) {
           as="li"
           variant="small"
           color="inherit"
-          className="capitalize"
+          className="capitalize cursor-pointer"
+          onClick={() => {
+            if (path) navigate(path);
+          }}
         >
-          {href ? (
-            <a
-              href={href}
-              target={target}
-              className="flex items-center gap-1 p-1 font-bold"
-            >
-              {icon &&
-                React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
-                })}
-              {name}
-            </a>
-          ) : (
-            <Link
-              to={path}
-              target={target}
-              className="flex items-center gap-1 p-1 font-bold"
-            >
-              {icon &&
-                React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
-                })}
-              {name}
-            </Link>
-          )}
+          <div className="flex items-center gap-1 p-1 font-bold">
+            {icon &&
+              React.createElement(icon, {
+                className: "w-[18px] h-[18px] opacity-75 mr-1",
+              })}
+            {name}
+          </div>
         </Typography>
       ))}
     </ul>
@@ -69,19 +54,6 @@ export function Navbar({ brandName, routes, action }) {
           </Typography>
         </Link>
         <div className="hidden lg:block">{navList}</div>
-        <div className="hidden gap-2 lg:flex">
-          <a
-            href="https://www.material-tailwind.com/blocks?ref=mtkr"
-            target="_blank"
-          >
-            <Button variant="text" size="sm" color="white" fullWidth>
-              pro version
-            </Button>
-          </a>
-          {React.cloneElement(action, {
-            className: "hidden lg:inline-block",
-          })}
-        </div>
         <IconButton
           variant="text"
           size="sm"
@@ -102,15 +74,6 @@ export function Navbar({ brandName, routes, action }) {
       >
         <div className="container mx-auto">
           {navList}
-          <a
-            href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
-            target="_blank"
-            className="mb-2 block"
-          >
-            <Button variant="text" size="sm" fullWidth>
-              pro version
-            </Button>
-          </a>
           {React.cloneElement(action, {
             className: "w-full block",
           })}
@@ -127,9 +90,9 @@ Navbar.defaultProps = {
       href="https://www.creative-tim.com/product/material-tailwind-kit-react"
       target="_blank"
     >
-      <Button variant="gradient" size="sm" fullWidth>
+      {/* <Button variant="gradient" size="sm" fullWidth>
         free download
-      </Button>
+      </Button> */}
     </a>
   ),
 };

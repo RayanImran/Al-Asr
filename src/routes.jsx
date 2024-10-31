@@ -1,4 +1,6 @@
-import { Home, Profile, SignIn, SignUp } from "@/pages";
+// routes.jsx
+
+import { Home, Profile, Event, AboutUs } from "@/pages";
 
 export const routes = [
   {
@@ -12,20 +14,14 @@ export const routes = [
     element: <Profile />,
   },
   {
-    name: "Sign In",
-    path: "/sign-in",
-    element: <SignIn />,
+    name: "Event",
+    path: "/event",
+    element: <Event />, // Correct reference to the Events component
   },
   {
-    name: "Sign Up",
-    path: "/sign-up",
-    element: <SignUp />,
-  },
-  {
-    name: "Docs",
-    href: "https://www.material-tailwind.com/docs/react/installation",
-    target: "_blank",
-    element: "",
+    name: "About Us",
+    path: "/aboutus",
+    element: <AboutUs />,
   },
 ];
 
