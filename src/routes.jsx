@@ -1,6 +1,6 @@
 // routes.jsx
 
-import { Home, Profile, SignIn, SignUp, AboutUs } from "@/pages";
+import { Home, Profile, Event, AboutUs } from "@/pages";
 
 export const routes = [
   {
@@ -14,14 +14,9 @@ export const routes = [
     element: <Profile />,
   },
   {
-    name: "Sign In",
-    path: "/sign-in",
-    element: <SignIn />,
-  },
-  {
-    name: "Sign Up",
-    path: "/sign-up",
-    element: <SignUp />,
+    name: "Event",
+    path: "/event",
+    element: <Event />, // Correct reference to the Events component
   },
   {
     name: "Docs",
@@ -32,7 +27,7 @@ export const routes = [
   {
     name: "About Us",
     path: "/aboutus",
-    element: <AboutUs />, // Use AboutUs component
+    element: <AboutUs />,
   },
 ];
 
