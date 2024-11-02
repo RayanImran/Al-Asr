@@ -7,11 +7,11 @@ import {
 import { Link } from "react-router-dom";
 
 
-export function Events() {
+export function Event() {
     return (
       <div>Events</div>
     );
 
 }
 
-export default Events;
+export default Event;
