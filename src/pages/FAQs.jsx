@@ -1,55 +1,56 @@
-// pages/FAQs.jsx
+// pages/ContactUs.jsx
 import React from 'react';
-import { Typography, Button } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { Footer } from "@/widgets/layout"; // Assuming you have a Footer component
 
-export default function FAQs() {
+export default function ContactUs() {
   return (
     <>
-      <section className="relative block h-[50vh] pt-16"> {/* Add pt-16 to offset the fixed navbar */}
-        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/faqs-background.png')] bg-cover bg-center scale-105" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-      </section>
+      <div
+        className="relative min-h-screen bg-cover bg-center flex flex-col items-center pt-24 px-4 sm:px-8"
+        style={{ backgroundImage: "url('/img/background-4.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
 
-      <section className="relative bg-white py-16">
-        <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
-          <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row justify-between">
-              <div className="relative flex gap-6 items-start">
-                <div className="flex flex-col mt-2">
-                  <Typography variant="h3" color="blue-gray" className="font-bold">
-                    Frequently Asked Questions (FAQs)
-                  </Typography>
-                </div>
-              </div>
-            </div>
-            <div className="mt-10 space-y-6">
-              <Typography variant="h5" color="blue-gray" className="font-bold">
-                What is this website about?
-              </Typography>
-              <Typography className="text-blue-gray-500">
-                This website serves as a platform for learning, connecting, and participating in community-driven initiatives. It provides resources, events, and a space for discussions to foster growth and support.
-              </Typography>
-              <Typography variant="h5" color="blue-gray" className="font-bold">
-                How can I join the Al-Asr Club?
-              </Typography>
-              <Typography className="text-blue-gray-500">
-                You can join the Al-Asr Club by signing up through the website. Membership gives you access to exclusive content, events, and the ability to contribute to community discussions.
-              </Typography>
-              <Typography variant="h5" color="blue-gray" className="font-bold">
-                Who can participate in the events and discussions?
-              </Typography>
-              <Typography className="text-blue-gray-500">
-                Anyone who registers on the platform can participate in the events and discussions. Our goal is to create an inclusive and supportive environment for everyone.
-              </Typography>
-            </div>
+        <div className="relative z-10 max-w-4xl mx-auto mt-10 mb-6 text-center text-white">
+          {/* FAQ Section */}
+          <Typography variant="h2" color="white" className="font-bold mb-10">
+            Frequently Asked Questions (FAQs)
+          </Typography>
+
+          {/* Question 1 */}
+          <div className="mb-8 px-4 lg:px-0">
+            <Typography variant="h5" color="white" className="font-bold mb-2 text-center lg:text-left">
+              What is this website about?
+            </Typography>
+            <Typography className="text-white text-justify leading-relaxed sm:leading-loose">
+              This website serves as a platform for learning, connecting, and participating in community-driven initiatives. It provides resources, events, and a space for discussions to foster growth and support.
+            </Typography>
+          </div>
+
+          {/* Question 2 */}
+          <div className="mb-8 px-4 lg:px-0">
+            <Typography variant="h5" color="white" className="font-bold mb-2 text-center lg:text-left">
+              How can I join the Al-Asr Club?
+            </Typography>
+            <Typography className="text-white text-justify leading-relaxed sm:leading-loose">
+              You can join the Al-Asr Club by signing up through the website. Membership gives you access to exclusive content, events, and the ability to contribute to community discussions.
+            </Typography>
+          </div>
+
+          {/* Question 3 */}
+          <div className="mb-8 px-4 lg:px-0">
+            <Typography variant="h5" color="white" className="font-bold mb-2 text-center lg:text-left">
+              Who can participate in the events and discussions?
+            </Typography>
+            <Typography className="text-white text-justify leading-relaxed sm:leading-loose">
+              Anyone who registers on the platform can participate in the events and discussions. Our goal is to create an inclusive and supportive environment for everyone.
+            </Typography>
           </div>
         </div>
-      </section>
-
-      <div className="bg-white">
-        <Footer />
       </div>
+
+      <Footer />
     </>
   );
 }

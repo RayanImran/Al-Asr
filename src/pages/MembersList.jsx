@@ -70,8 +70,9 @@ export function MembersList() {
   return (
     <>
       <div className="relative min-h-screen bg-[url('/img/background-4.jpg')] bg-cover bg-center flex flex-col justify-center items-center pt-24 md:pt-32">
+      <div className="absolute inset-0 bg-black bg-opacity-60" />
         {/* Page title */}
-        <Typography variant="h1" className="text-center font-bold mb-8 text-white">
+        <Typography variant="h1" className="text-center font-bold mb-8 text-white z-10">
           Members List
         </Typography>
 
