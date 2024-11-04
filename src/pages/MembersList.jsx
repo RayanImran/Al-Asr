@@ -1,109 +1,104 @@
 // pages/MembersList.jsx
 import React from 'react';
-import { Avatar, Typography, Button } from "@material-tailwind/react";
-import { MapPinIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
+import { Avatar, Typography, Card, CardBody } from "@material-tailwind/react";
 import { Footer } from "@/widgets/layout"; // Assuming you have a Footer component
 
 export function MembersList() {
   const members = [
     {
-      name: "Emma Stones",
-      email: "jenna@mail.com",
-      location: "Los Angeles, California",
-      role: "Solution Manager - Creative Tim Officer",
-      university: "University of Computer Science",
-      avatar: "/img/team-5.png",
-      friends: 22,
-      photos: 10,
-      comments: 89,
+      name: "Sadid Bin Saif",
+      email: "saifsadid29.ss@gmail.com",
+      phone: "431-275-1216",
     },
-    // Add more members as needed
+    {
+      name: "Aryan Fida Nur",
+      email: "aryanfidanur@gmail.com",
+      phone: "431-788-4136",
+    },
+    {
+      name: "Ahmed Nahian Chowdhury",
+      email: "nahianchowdhury18@gmail.com",
+      phone: "431-336-6338",
+    },
+    {
+      name: "Hamza Noor Shabab",
+      email: "rbarkat1208@gmail.com",
+      phone: "431-990-3588",
+    },
+    {
+      name: "Rubiat Khan Turag",
+      email: "rubiat614@gmail.com",
+      phone: "431-990-1830",
+    },
+    {
+      name: "MD Ibrahim",
+      email: "mdibrahim002438@gmail.com",
+      phone: "204-493-0664",
+    },
+    {
+      name: "Hamed Bin Mazaher",
+      email: "hamed.ahnat@gmail.com",
+      phone: "431-294-3339",
+    },
+    {
+      name: "Abdullah Bin Joynal",
+      email: "abdullahbinjoynal@gmail.com",
+      phone: "204-291-5904",
+    },
+    {
+      name: "Shawon Bhuiyan",
+      email: "shawonbhuiyan368@gmail.com",
+      phone: "204-698-1745",
+    },
+    {
+      name: "Mahedi Hasan",
+      email: "mahedixh@gmail.com",
+      phone: "431-323-0822",
+    },
+    {
+      name: "MD Mominul Islam Toukir",
+      email: "toukirahmed74@gmail.com",
+      phone: "431-986-0833",
+    },
+    {
+      name: "MD Saiful Islam",
+      email: "saifulislam.ca431@gmail.com",
+      phone: "431-877-2961",
+    },
   ];
 
   return (
     <>
-      <section className="relative block h-[50vh]">
-        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/members-background.png')] bg-cover bg-center scale-105" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-      </section>
+      <div className="relative min-h-screen bg-[url('/img/background-4.jpg')] bg-cover bg-center flex flex-col justify-center items-center pt-24 md:pt-32">
+        {/* Page title */}
+        <Typography variant="h1" className="text-center font-bold mb-8 text-white">
+          Members List
+        </Typography>
 
-      <section className="relative bg-white py-16">
-        <div className="container mx-auto">
-          {members.map((member, index) => (
-            <div key={index} className="relative mb-6 flex w-full px-4 min-w-0 flex-col break-words bg-white shadow-lg rounded-lg mb-12">
-              <div className="flex flex-col lg:flex-row justify-between p-6">
-                <div className="relative flex gap-6 items-start">
-                  <div className="w-40">
-                    <Avatar
-                      src={member.avatar}
-                      alt={`Profile picture of ${member.name}`}
-                      variant="circular"
-                      className="h-full w-full"
-                    />
-                  </div>
-                  <div className="flex flex-col mt-2">
-                    <Typography variant="h4" color="blue-gray">
-                      {member.name}
+        {/* Members grid */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-4">
+          {members.map(({ name, email, phone }, index) => (
+            <Card key={index} className="shadow-lg border rounded-lg bg-white bg-opacity-80">
+              <CardBody>
+                <div className="flex items-center mb-4">
+                  <div className="ml-4">
+                    <Typography variant="h5" color="blue-gray" className="font-bold">
+                      {name}
                     </Typography>
-                    <Typography variant="paragraph" color="gray" className="!mt-0 font-normal">
-                      {member.email}
+                    <Typography variant="small" color="blue-gray" className="font-medium">
+                      {email}
+                    </Typography>
+                    <Typography variant="small" color="gray">
+                      {phone}
                     </Typography>
                   </div>
                 </div>
-
-                <div className="mt-10 mb-10 flex lg:flex-col justify-between items-center lg:justify-end lg:mb-0 lg:px-4 flex-wrap lg:-mt-5">
-                  <Button className="bg-gray-900 w-fit lg:ml-auto">Connect</Button>
-                  <div className="flex justify-start py-4 pt-8 lg:pt-4">
-                    <div className="mr-4 p-3 text-center">
-                      <Typography variant="lead" color="blue-gray" className="font-bold uppercase">
-                        {member.friends}
-                      </Typography>
-                      <Typography variant="small" className="font-normal text-blue-gray-500">
-                        Friends
-                      </Typography>
-                    </div>
-                    <div className="mr-4 p-3 text-center">
-                      <Typography variant="lead" color="blue-gray" className="font-bold uppercase">
-                        {member.photos}
-                      </Typography>
-                      <Typography variant="small" className="font-normal text-blue-gray-500">
-                        Photos
-                      </Typography>
-                    </div>
-                    <div className="p-3 text-center lg:mr-4">
-                      <Typography variant="lead" color="blue-gray" className="font-bold uppercase">
-                        {member.comments}
-                      </Typography>
-                      <Typography variant="small" className="font-normal text-blue-gray-500">
-                        Comments
-                      </Typography>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="-mt-4 container space-y-2 px-6">
-                <div className="flex items-center gap-2">
-                  <MapPinIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
-                  <Typography className="font-medium text-blue-gray-500">
-                    {member.location}
-                  </Typography>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BriefcaseIcon className="-mt-px h-4 w-4 text-blue-gray-500" />
-                  <Typography className="font-medium text-blue-gray-500">
-                    {member.role}
-                  </Typography>
-                </div>
-              </div>
-            </div>
+              </CardBody>
+            </Card>
           ))}
         </div>
-      </section>
-
-      <div className="bg-white">
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
