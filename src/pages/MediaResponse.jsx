@@ -1,55 +1,84 @@
 // pages/MediaResponse.jsx
 import React from 'react';
-import { Typography, Button } from "@material-tailwind/react";
+import { Typography, Card, CardBody, CardHeader } from "@material-tailwind/react";
 import { Footer } from "@/widgets/layout"; // Assuming you have a Footer component
 
 export default function MediaResponse() {
   return (
     <>
-      <section className="relative block h-[50vh] pt-16"> {/* Add pt-16 to offset the fixed navbar */}
-        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/media-background.png')] bg-cover bg-center scale-105" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-      </section>
+      <div
+        className="relative min-h-screen bg-cover bg-center flex flex-col items-center pt-24 px-4 sm:px-8"
+        style={{ backgroundImage: "url('/img/background-4.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
 
-      <section className="relative bg-white py-16">
-        <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
-          <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row justify-between">
-              <div className="relative flex gap-6 items-start">
-                <div className="flex flex-col mt-2">
-                  <Typography variant="h3" color="blue-gray" className="font-bold">
-                    Media Response
-                  </Typography>
-                </div>
-              </div>
-            </div>
-            <div className="mt-10 space-y-6">
-              <Typography variant="h5" color="blue-gray" className="font-bold">
-                Understanding Media's Role
-              </Typography>
-              <Typography className="text-blue-gray-500">
-                Media plays a crucial role in shaping public perception and influencing societal trends. In today's digital world, the ability to critically analyze media and respond thoughtfully is more important than ever. This section provides insights and discussions on how media impacts various aspects of life and what responsible media consumption entails.
-              </Typography>
-              <Typography variant="h5" color="blue-gray" className="font-bold">
-                Engaging with Media Responsibly
-              </Typography>
-              <Typography className="text-blue-gray-500">
-                This website offers tools and resources to help users better understand media content, promote media literacy, and encourage critical thinking. Our goal is to empower individuals to navigate the complex media landscape, make informed decisions, and contribute positively to media discourse.
-              </Typography>
-              <Typography variant="h5" color="blue-gray" className="font-bold">
-                Join Our Media Response Community
-              </Typography>
-              <Typography className="text-blue-gray-500">
-                By participating in our community, you can engage in meaningful discussions, share perspectives, and learn from others on how media influences society and individual viewpoints. We aim to foster a community that values thoughtful media engagement and informed dialogue.
-              </Typography>
-            </div>
+        <div className="relative z-10 max-w-4xl mx-auto mt-10 mb-6 text-center">
+          <Typography variant="h2" className="text-white font-bold mb-6">
+            Media Response
+          </Typography>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Card 1: Radio Interview */}
+            <Card className="bg-white bg-opacity-80 shadow-lg rounded-lg">
+              <CardHeader floated={false} className="relative h-56">
+                <img
+                  alt="Radio interview"
+                  src="/img/m.png"
+                  className="h-full w-full rounded-lg"
+                />
+              </CardHeader>
+              <CardBody className="text-center">
+                <Typography variant="h5" color="blue-gray" className="font-bold mb-2">
+                  Radio Interview with CBC
+                </Typography>
+                <Typography variant="small" color="blue-gray">
+                  Interview with Mr. Abu Masood by Marcy Markusa, host of the CBC Information Radio program at 89.3 FM, 2019.
+                </Typography>
+              </CardBody>
+            </Card>
+
+            {/* Card 2: CBC Report */}
+            <Card className="bg-white bg-opacity-80 shadow-lg rounded-lg">
+              <CardHeader floated={false} className="relative h-56">
+                <img
+                  alt="CBC Report"
+                  src="/img/m.png"
+                  className="h-full w-full rounded-lg"
+                />
+              </CardHeader>
+              <CardBody className="text-center">
+                <Typography variant="h5" color="blue-gray" className="font-bold mb-2">
+                  CBC Report about 116 Club
+                </Typography>
+                <Typography variant="small" color="blue-gray">
+                  Live long and die healthy: How a group of Winnipeggers are working to live to 116 with a focus on fun, fitness.
+                </Typography>
+              </CardBody>
+            </Card>
+
+            {/* Card 3: CBC Broadcast */}
+            <Card className="bg-white bg-opacity-80 shadow-lg rounded-lg">
+              <CardHeader floated={false} className="relative h-56">
+                <img
+                  alt="CBC Broadcast"
+                  src="/img/m.png"
+                  className="h-full w-full rounded-lg"
+                />
+              </CardHeader>
+              <CardBody className="text-center">
+                <Typography variant="h5" color="blue-gray" className="font-bold mb-2">
+                  CBC 6 PM News Broadcast
+                </Typography>
+                <Typography variant="small" color="blue-gray">
+                  The CBC 6 PM news broadcast on Nov. 25th 2019 that featured our club.
+                </Typography>
+              </CardBody>
+            </Card>
           </div>
         </div>
-      </section>
-
-      <div className="bg-white">
-        <Footer />
       </div>
+
+      <Footer />
     </>
   );
 }
