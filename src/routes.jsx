@@ -9,6 +9,11 @@ export const routes = [
     element: <Home />,
   },
   {
+    name: "About Us",
+    path: "/aboutus",
+    element: <AboutUs />,
+  },
+  {
     name: "Members List",
     path: "/members-list",
     element: <MembersList />,
@@ -22,11 +27,6 @@ export const routes = [
     name: "Media Response",
     path: "/media-response",
     element: <MediaResponse />,
-  },
-  {
-    name: "About Us",
-    path: "/aboutus",
-    element: <AboutUs />,
   },
   {
     name: "FAQs",
