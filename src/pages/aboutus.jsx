@@ -13,33 +13,19 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-black bg-opacity-60" />
 
         <div className="relative z-10 max-w-4xl mx-auto mt-10 mb-6 text-center text-white">
-          {/* Surah Al-Asr Section */}
+          {/* Why Al-Asr Section */}
           <div className="mb-10 px-4 lg:px-0">
             <Typography variant="h3" color="white" className="font-bold mb-4 text-center lg:text-left">
-              Surah Al-Asr - A Guiding Light
+              Why Al-Asr?
             </Typography>
             <Typography className="text-white text-justify leading-relaxed sm:leading-loose">
-              Surah Al-Asr is a short yet profound chapter of the Quran that emphasizes the importance of time, faith, good deeds, and patience. The Surah highlights that by embracing these virtues, individuals can find true success and salvation. The message of Surah Al-Asr serves as a reminder for Muslims to value time and to strive for continuous improvement in faith and character.
+              The name of the club of Al-Asar is taken from Al-Asr, Surah 103 out of 114 Surahs in 30 verses of the Holy Book of Allah, ALL QURAN. In that surah, total verse 03, ruku 01. The club was named after Surah Al-Asar “Al-Asar Club”. “Al Asar Club” is a public welfare club. Basically, the word “Asar” means time.
             </Typography>
-          </div>
-
-          {/* Purpose of Website Section */}
-          <div className="mb-10 px-4 lg:px-0">
-            <Typography variant="h3" color="white" className="font-bold mb-4 text-center lg:text-left">
-              Purpose of This Website
+            <Typography className="text-white text-justify leading-relaxed sm:leading-loose mt-4">
+              This Surah was revealed in the early stages of Makki. The Surah has been revealed in this short, concise, and touching sentence to present the ideals and teachings of Islam. Even if one wanted to forget that surah, one could not forget it.
             </Typography>
-            <Typography className="text-white text-justify leading-relaxed sm:leading-loose">
-              This website is dedicated to fostering a community around the values found in Surah Al-Asr. The "Al-Asr Club" encourages members to share and inspire each other through acts of kindness, spiritual growth, and support. Our goal is to provide a platform where members can learn, connect, and work together toward a positive impact.
-            </Typography>
-          </div>
-
-          {/* Join Al-Asr Club Section */}
-          <div className="mb-10 px-4 lg:px-0">
-            <Typography variant="h3" color="white" className="font-bold mb-4 text-center lg:text-left">
-              Join the Al-Asr Club
-            </Typography>
-            <Typography className="text-white text-justify leading-relaxed sm:leading-loose">
-              By joining the Al-Asr Club, you become part of a community that values faith, patience, and mutual support. Whether through articles, events, or shared experiences, Al-Asr Club members help each other grow and live out the teachings of this meaningful Surah.
+            <Typography className="text-white text-justify leading-relaxed sm:leading-loose mt-4">
+              In that surah, there is an ocean of meanings and meanings hidden in small words and more than one complete book is needed to describe the features well. Apart from the path of real welfare and well-being of human beings, the open path of destruction and extreme calamity has been described in clear and unequivocal language in this Surah. If people think deeply about this Surah and fully understand it, then this Surah is enough for their guidance.
             </Typography>
           </div>
         </div>

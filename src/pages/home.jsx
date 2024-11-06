@@ -28,11 +28,7 @@ export function Home() {
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-              <Typography
-                variant="h1"
-                color="white"
-                className="mb-4 font-black"
-              >
+              <Typography variant="h1" color="white" className="mb-4 font-black">
                 WATCH OUT!<p>AL-ASR.</p>
               </Typography>
               <Typography variant="lead" color="white" className="opacity-90 text-lg">
@@ -45,11 +41,19 @@ export function Home() {
                   </span>
                 </div>
                 {/* English text box */}
-                <div className="border border-gray-300 p-4 rounded-lg bg-opacity-10 bg-white">
+                <div className="border border-gray-300 p-4 rounded-lg mb-6 bg-opacity-10 bg-white">
                   <p className="text-lg">
                     (1) By the (passage of) time! <br />
                     (2) Surely humanity is in (grave) loss, <br />
                     (3) except those who have faith, do good, and urge each other to the truth, and urge each other to perseverance.
+                  </p>
+                </div>
+                {/* Urdu text box */}
+                <div className="border border-gray-300 p-4 rounded-lg bg-opacity-10 bg-white">
+                  <p className="text-lg">
+                    (١) قسم ہے زمانے کی، <br />
+                    (٢) بیشک انسان خسارے میں ہے، <br />
+                    (٣) سوائے ان لوگوں کے جو ایمان لائے اور نیک عمل کرتے رہے اور ایک دوسرے کو حق کی تلقین کرتے رہے اور ایک دوسرے کو صبر کی تاکید کرتے رہے۔
                   </p>
                 </div>
               </Typography>
@@ -57,14 +61,13 @@ export function Home() {
           </div>
         </div>
       </div>
-
       {/* Sheikh Karim - Al Asr explanation video section */}
       <section className="px-4 py-10 bg-white">
         <div className="container mx-auto flex flex-col md:flex-row items-center md:justify-center space-y-8 md:space-y-0 md:space-x-8">
           {/* First Video Card */}
           <div className="text-center w-full md:w-auto">
             <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
-              Sheikh Karim
+              Mufti Menk
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
               Al Asr explanation
@@ -83,27 +86,28 @@ export function Home() {
           {/* Replica Video Card */}
           <div className="text-center w-full md:w-auto">
             <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
-              Abu Masood
+              Maulana Tariq Jameel
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
-              Interview regarding the subject
+              Surah Asar (Quran) - Tarjuma Tafseer by
             </Typography>
             <iframe
-              className="w-full md:w-[560px] h-[315px]"
-              src="https://www.youtube.com/embed/aF-gi9kX5FQ?si=dz-4hiaglF_xcb3q"
-              title="YouTube video player"
-              frameBorder="0"
+              class="w-full md:w-[560px] h-[315px]"
+              src="https://www.youtube.com/embed/7NZGhvvNa_I"
+              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
             ></iframe>
           </div>
         </div>
       </section>
 
-      <div className="bg-white">
+      {/* Footer Section */}
+      <div className="bg-gray-900 text-white">
         <Footer />
       </div>
+
     </>
   );
 }
