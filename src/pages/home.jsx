@@ -64,45 +64,74 @@ export function Home() {
       {/* Sheikh Karim - Al Asr explanation video section */}
       <section className="px-4 py-10 bg-white">
         <div className="container mx-auto flex flex-col md:flex-row items-center md:justify-center space-y-8 md:space-y-0 md:space-x-8">
+
+          {/* Third Video Card */}
+          <div className="text-center w-full md:w-[560px]">
+            <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
+              Surah Al-Asr Lecture by Sheikh Kabir
+            </Typography>
+            <Typography variant="h6" color="blue-gray" className="mb-4">
+              An in-depth explanation of Surah Al-Asr
+            </Typography>
+            <div className="relative w-full h-0 pb-[56.25%]">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/zbHwlBqxg9U"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
           {/* First Video Card */}
-          <div className="text-center w-full md:w-auto">
+          <div className="text-center w-full md:w-[560px]">
             <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
               Sheikh Waleed Basyouni
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
               Reflections on Surah Al-Asr
             </Typography>
-            <iframe
-              className="w-full md:w-[560px] h-[315px]"
-              src="https://www.youtube.com/embed/25d47KvsMnw"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+            <div className="relative w-full h-0 pb-[56.25%]">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/25d47KvsMnw"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
 
-          {/* Replica Video Card */}
-          <div className="text-center w-full md:w-auto">
+          {/* Second Video Card */}
+          <div className="text-center w-full md:w-[560px]">
             <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
               Maulana Tariq Jameel
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
               Explanation of Surah Al-Asr (Urdu)
             </Typography>
-            <iframe
-              class="w-full md:w-[560px] h-[315px]"
-              src="https://www.youtube.com/embed/7NZGhvvNa_I"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <div className="relative w-full h-0 pb-[56.25%]">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/7NZGhvvNa_I"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
+
+
+
         </div>
       </section>
-
       {/* Footer Section */}
       <div className="bg-gray-900 text-white">
         <Footer />
