@@ -68,7 +68,7 @@ export function Home() {
           {/* Third Video Card */}
           <div className="text-center w-full md:w-[560px]">
             <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
-              Sheikh Kabir
+              Sheikh Kabir Yousaf
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
             Surah Al-Asr Lecture Khutbah 
