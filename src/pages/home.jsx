@@ -20,8 +20,8 @@ import { featuresData, teamData, contactData } from "@/data";
 export function Home() {
   return (
     <>
-      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/background-4.jpg')] bg-cover bg-center">
+      <div className="relative flex h-screen content-center items-center justify-center pt-32 sm:pt-24 pb-32">
+        <div className="absolute top-0 h-full w-full bg-[url('/img/background-4-web.webp')] bg-cover bg-center">
           <div className="absolute inset-0 bg-gradient-radial from-transparent to-black opacity-90" />
         </div>
         <div className="absolute top-0 h-full w-full bg-blue/60 bg-cover bg-center" />
@@ -67,14 +67,14 @@ export function Home() {
           {/* First Video Card */}
           <div className="text-center w-full md:w-auto">
             <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
-              Mufti Menk
+              Sheikh Waleed Basyouni
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
-              Al Asr explanation
+              Reflections on Surah Al-Asr
             </Typography>
             <iframe
               className="w-full md:w-[560px] h-[315px]"
-              src="https://www.youtube.com/embed/aF-gi9kX5FQ?si=dz-4hiaglF_xcb3q"
+              src="https://www.youtube.com/embed/25d47KvsMnw"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -89,7 +89,7 @@ export function Home() {
               Maulana Tariq Jameel
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
-              Surah Asar (Quran) - Tarjuma Tafseer by
+              Explanation of Surah Al-Asr (Urdu)
             </Typography>
             <iframe
               class="w-full md:w-[560px] h-[315px]"
