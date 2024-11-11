@@ -45,7 +45,7 @@ export function Navbar({ brandName, routes, action }) {
   );
 
   return (
-    <MTNavbar color="transparent" className="fixed top-0 left-0 w-full z-50 p-3 bg-opacity-20 backdrop-blur-lg rounded-xl">
+    <MTNavbar color="transparent" className="fixed top-0 left-0 w-full z-50 p-3 bg-opacity-20 rounded-xl">
       <div className="container mx-auto flex items-center justify-between text-white">
         <Link to="/">
           <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold text-lg">
