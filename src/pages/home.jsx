@@ -68,10 +68,10 @@ export function Home() {
           {/* Third Video Card */}
           <div className="text-center w-full md:w-[560px]">
             <Typography variant="h3" color="blue-gray" className="font-bold mb-2">
-              Surah Al-Asr Lecture by Sheikh Kabir
+              Sheikh Kabir
             </Typography>
             <Typography variant="h6" color="blue-gray" className="mb-4">
-              An in-depth explanation of Surah Al-Asr
+            Surah Al-Asr Lecture Khutbah 
             </Typography>
             <div className="relative w-full h-0 pb-[56.25%]">
               <iframe

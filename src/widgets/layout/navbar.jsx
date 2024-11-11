@@ -14,15 +14,14 @@ export function Navbar({ brandName, routes, action }) {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 960) setOpenNav(false);
+    });
   }, []);
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {routes.map(({ name, path, icon, href, target }) => (
+      {routes.map(({ name, path, icon }) => (
         <Typography
           key={name}
           as="li"
@@ -46,10 +45,10 @@ export function Navbar({ brandName, routes, action }) {
   );
 
   return (
-    <MTNavbar color="transparent" className="p-3">
+    <MTNavbar color="transparent" className="fixed top-0 left-0 w-full z-50 p-3 bg-opacity-20 backdrop-blur-lg rounded-xl">
       <div className="container mx-auto flex items-center justify-between text-white">
         <Link to="/">
-          <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
+          <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold text-lg">
             {brandName}
           </Typography>
         </Link>
@@ -74,7 +73,7 @@ export function Navbar({ brandName, routes, action }) {
       >
         <div className="container mx-auto">
           {navList}
-          {React.cloneElement(action, {
+          {action && React.cloneElement(action, {
             className: "w-full block",
           })}
         </div>
@@ -85,21 +84,18 @@ export function Navbar({ brandName, routes, action }) {
 
 Navbar.defaultProps = {
   brandName: "Al-Asr by Abu Masood",
-  action: (
-    <a
-      href="https://www.creative-tim.com/product/material-tailwind-kit-react"
-      target="_blank"
-    >
-      {/* <Button variant="gradient" size="sm" fullWidth>
-        free download
-      </Button> */}
-    </a>
-  ),
+  action: null,
 };
 
 Navbar.propTypes = {
   brandName: PropTypes.string,
-  routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  routes: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      path: PropTypes.string,
+      icon: PropTypes.elementType,
+    })
+  ).isRequired,
   action: PropTypes.node,
 };
 
