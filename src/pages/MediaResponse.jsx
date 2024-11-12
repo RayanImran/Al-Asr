@@ -8,7 +8,7 @@ export default function MediaResponse() {
     <>
       <div
         className="relative min-h-screen bg-cover bg-center flex flex-col items-center pt-24 px-4 sm:px-8"
-        style={{ backgroundImage: "url('/img/background-4-web.webp')" }}
+        style={{ backgroundImage: "url('/img/background-4-comp.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60" />
 

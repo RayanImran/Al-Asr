@@ -21,7 +21,7 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-32 sm:pt-24 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/background-4-web.webp')] bg-cover bg-center">
+        <div className="absolute top-0 h-full w-full bg-[url('/img/background-4-comp.jpg')] bg-cover bg-center">
           <div className="absolute inset-0 bg-gradient-radial from-transparent to-black opacity-90" />
         </div>
         <div className="absolute top-0 h-full w-full bg-blue/60 bg-cover bg-center" />
